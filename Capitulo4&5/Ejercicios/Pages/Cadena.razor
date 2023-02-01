@@ -1,0 +1,23 @@
+﻿@page "/cadena"
+
+<h3>Cadena</h3>
+
+<label>Ingresa un número</label>
+        <input placeholder="..." @bind="@numero" />
+            <div>
+                <button @onclick="Convertir">click</button>
+            </div>
+        <p>Resultado: @(str)</p>
+
+@code {
+    
+    int numero;
+    char str;
+    void Convertir()
+    {
+        
+        str = Convert.ToChar(numero);
+        
+    }
+    
+}

@@ -1,0 +1,28 @@
+﻿@page "/potencia"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Bienvenido al numero elevado a la potencia!</h1>
+
+<label>Ingresa un número</label>
+        <input placeholder="..." @bind="@numero" />
+            <div>
+                <button @onclick="potencia">click</button>
+            </div>
+        <p>resultado: @(NumPotencia)</p>
+
+
+
+
+@code{
+    
+    double NumPotencia;
+    double numero;
+    void potencia(){
+
+    NumPotencia = Math.Pow(numero, 2);
+
+
+    }
+    
+}

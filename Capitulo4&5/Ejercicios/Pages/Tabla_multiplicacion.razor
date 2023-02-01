@@ -1,0 +1,23 @@
+﻿@page "/tabla"
+
+<h3>Multiplicación</h3>
+<div>
+    <label>Ingresa un número:</label>
+    <input placeholder="..." @bind="@numero" />
+</div>
+
+<div>
+    <ul>
+        @for (var i = 1; i <= 15; i++)
+        {
+            <li>@numero * @i = @(numero * i)</li>
+        }
+    </ul>
+</div>
+
+
+@code {
+
+    public int numero { get; set; }
+
+}

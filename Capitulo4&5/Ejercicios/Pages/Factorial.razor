@@ -1,0 +1,27 @@
+﻿@page "/factorial"
+
+<h3>Factorial</h3>
+
+<label>Ingresa un número</label>
+        <input placeholder="..." @bind="@num" />
+            <div>
+                <button @onclick="factorial">click</button>
+            </div>
+        <li>Resultado: @(resultado)</li>
+
+
+@code {
+    
+    int num;
+    int resultado;
+    void factorial()
+    {
+        int fact=1;
+        for (int i = 1; i <= num; i++)
+        {
+            fact *= i;
+        }
+       
+       resultado = fact;
+    }
+}
